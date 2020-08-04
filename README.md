@@ -32,26 +32,6 @@ Follow a link with explanation [groupping checkboxes](https://github.com/philips
 - tooltipField
 
 
-### onChange
-----
-#### :clock230: When?
-This event executed when changing value the checkbox.
-
-#### :bookmark_tabs: Parameters
-**handler:** _(Object)_ Component handler <br>
-**nmAtributo:** _(String)_  Name Atribute<br>
-**oldValue:** _(Object)_  Old Value<br>
-**newValue:** _(Object)_  New Value<br>
-**source:** _(WCheckboxConstants)_  Source checkbox<br>
-
-#### :pencil2: Example 
-
-```javascript      
-onChange(handler, nmAtributo, oldValue, newValue, source) {
-  //do something
-}
-```
-
 ## Event Listeners
 
 - [onChange](#onchange)
@@ -63,6 +43,133 @@ onChange(handler, nmAtributo, oldValue, newValue, source) {
 - [onChangeVisibility](#onchangevisibility)
 - [onInfobuttonClick](#oninfobuttonclick)
 
+
+### onChange
+----
+#### :clock230: When?
+This event executed when changing value the checkbox.
+
+#### :bookmark_tabs: Parameters
+**handler:** _(Object)_ Component handler <br>
+**nmAtributo:** _(String)_  Name Atribute<br>
+**oldValue:** _(Object)_  Old Value<br>
+**newValue:** _(Object)_  New Value<br>
+**source:** _(WCheckboxConstants)_  Source checkbox
+
+#### :pencil2: Example 
+```javascript      
+onChange(handler, nmAtributo, oldValue, newValue, source) {
+  //do something
+}
+```
+
+### onLoad
+----
+#### :clock230: When?
+This event is triggered when the w-checkbox component is loaded.
+
+#### :pencil2: Example 
+```javascript      
+onLoad() {
+  //do something
+}
+```
+
+### onFocus
+----
+#### :clock230: When?
+This event is fired when the component has the focus on it.
+
+#### :bookmark_tabs: Parameters
+**event** _(Object)_ Event data as an object.
+
+#### :pencil2: Example 
+```javascript      
+onFocus(event) {
+  //do something
+}
+```
+
+### onBlur
+----
+#### :clock230: When?
+This event fired when focus out.
+
+#### :pencil2: Example 
+```javascript      
+onBlur() {
+  //do something
+}
+```
+
+### onClick
+----
+#### :clock230: When?
+This event is triggered when the internal daily directive is clicked.
+
+#### :bookmark_tabs: Parameters
+**event** _(Object)_ Event data as an object.
+
+#### :pencil2: Example 
+
+```javascript
+onClick(event){ 
+  //do something
+}
+```
+
+### onDoubleClick
+----
+#### :clock230: When?
+This event is triggered when the internal daily directive is clicked.
+
+#### :bookmark_tabs: Parameters
+**handler:** _(Object)_ Component handler <br>
+**nmAtributo:** _(String)_  Name Atribute<br>
+**value** _(Object)_ Value descripion of the checkbox.
+
+#### :pencil2: Example 
+
+```javascript
+onDoubleClick(handler, nmAtributo, value){ 
+  //do something
+}
+```
+
+### onChangeVisibility
+----
+#### :clock230: When?
+This event fired when component change the visibility.
+
+#### :bookmark_tabs: Parameters
+**handler:** _(Object)_ Component handler
+
+#### :pencil2: Example 
+
+```javascript
+onChangeVisibility(handler){ 
+  //do something
+}
+```
+
+### onInfobuttonClick
+----
+#### :clock230: When?
+This event is fire after the click on the info button.
+
+#### :bookmark_tabs: Parameters
+**code:** _(Object)_ Code of the component<br>
+**value** _(Object)_ Value descripion of the checkbox.<br>
+**nmAtributo:** _(String)_  Name Atribute<br>
+**data:** _(Object)_  Data of the scope <br>
+
+#### :pencil2: Example 
+
+```javascript
+onInfobuttonClick(code, value, nmAtributo, data){ 
+  //do something
+}
+```
 
 ## Handler Methods
 
