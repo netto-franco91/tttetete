@@ -32,6 +32,26 @@ Follow a link with explanation [groupping checkboxes](https://github.com/philips
 - tooltipField
 
 
+### onChange
+----
+#### :clock230: When?
+This event executed when changing value the checkbox.
+
+#### :bookmark_tabs: Parameters
+**handler:** _(Object)_ Component handler <br>
+**nmAtributo:** _(String)_  Name Atribute<br>
+**oldValue:** _(Object)_  Old Value<br>
+**newValue:** _(Object)_  New Value<br>
+**source:** _(WCheckboxConstants)_  Source checkbox<br>
+
+#### :pencil2: Example 
+
+```javascript      
+onChange(handler, nmAtributo, oldValue, newValue, source) {
+  //do something
+}
+```
+
 ## Event Listeners
 
 - [onChange](#onchange)
