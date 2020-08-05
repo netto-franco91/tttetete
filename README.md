@@ -20,18 +20,17 @@ Follow a link with explanation [groupping checkboxes](https://github.com/philips
 ## Attributes
 |      Name         |           Description                               |     Mandatory?     |      Type      |
 |  :------------    |    :--------------------------                      |    :----------:    |  :----------:  |
-|   state           |     Default label stylename                         |         No         |     String     |
-|   handler         |     Show or Hide the label                          |         No         |     Boolean    |
-|   value           |     Enable or Disable the label                     |         No         |     Boolean    |
-|   label           |     A text/message code to be shown                 |         No         |     Number     |
-|   display         |     If true, setValue method has no verification    |         No         |     Boolean    |
-|   readOnly        |     If true, setValue method has no verification    |         No         |     Boolean    |
-|   showsInfo       |     If true, setValue method has no verification    |         No         |     Boolean    |
-|   openInfo        |     If true, setValue method has no verification    |         No         |     Boolean    |
-|   data            |     If true, setValue method has no verification    |         No         |     Boolean    |
-|   noDirty         |     If true, setValue method has no verification    |         No         |     Boolean    |
-|   alwaysShowTooltip |   If true, setValue method has no verification    |         No         |     Boolean    |
-|   tooltipField    |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   state           |     Default state value component                   |         No         |     Boolean    |
+|   handler         |     Custom Handler Object                           |         No         |     Object     |
+|   value           |     Default value component                         |         No         |     String     |
+|   label           |     Default label value component                   |         No         |     String     |
+|   display         |     If true, the component will be display          |         No         |     Boolean    |
+|   readOnly        |     If true, the component will be read only        |         No         |     Boolean    |
+|   showsInfo       |     Shows Info of the component                     |         No         |     Boolean    |
+|   openInfo        |     Display component information                   |         No         |     Boolean    |
+|   data            |     Default data of the component                   |         No         |     Object     |
+|   alwaysShowTooltip |   If true, show tooltip of the component          |         No         |     Boolean    |
+|   tooltipField    |     Text of the tooltip Field                       |         No         |     String     |
 
 
 ## Event Listeners
