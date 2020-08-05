@@ -8,6 +8,7 @@ This component is responsible to render a checkbox component and control it's st
 - [Attributes](#attributes)
 - [Event Listeners](#event-listeners)
 - [Handler Methods](#handler-methods)
+- <a href="https://github.com/philips-emr/tasy-framework/blob/dev/packages/framework-demo/src/main/components/w-checkbox/" target="_blank">Demo link</a>
 - [Design spec link](#design-spec-link)
 
 
@@ -17,19 +18,20 @@ Follow a link with explanation [groupping checkboxes](https://github.com/philips
 
 
 ## Attributes
-
-- state
-- handler
-- value
-- label
-- display
-- readOnly
-- showsInfo
-- openInfo
-- data
-- noDirty
-- alwaysShowTooltip
-- tooltipField
+|      Name         |           Description                               |     Mandatory?     |      Type      |
+|  :------------    |    :--------------------------                      |    :----------:    |  :----------:  |
+|   state           |     Default label stylename                         |         No         |     String     |
+|   handler         |     Show or Hide the label                          |         No         |     Boolean    |
+|   value           |     Enable or Disable the label                     |         No         |     Boolean    |
+|   label           |     A text/message code to be shown                 |         No         |     Number     |
+|   display         |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   readOnly        |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   showsInfo       |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   openInfo        |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   data            |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   noDirty         |     If true, setValue method has no verification    |         No         |     Boolean    |
+|   alwaysShowTooltip |   If true, setValue method has no verification    |         No         |     Boolean    |
+|   tooltipField    |     If true, setValue method has no verification    |         No         |     Boolean    |
 
 
 ## Event Listeners
@@ -206,7 +208,10 @@ This method is used to get the value of checkbox.
   var row = handler.getValue();
 ```
 
+
 ### setValue
+----
+#### :clock230: When?
 This method is used to set the value of the checkbox
 
 |   Params  |           Description                   |   Type   | Default |
