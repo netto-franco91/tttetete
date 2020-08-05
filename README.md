@@ -174,6 +174,8 @@ onInfobuttonClick(code, value, nmAtributo, data){
 
 ## Handler Methods
 
+  - [getId](#getId)
+  - [setId](#setId)
   - [getValue](#getvalue)
   - [setValue](#setvalue)
   - [getOldValue](#getoldvalue)
@@ -196,6 +198,32 @@ onInfobuttonClick(code, value, nmAtributo, data){
   - [getLabel](#getlabel)
   - [setLabel](#setlabel)
   - [setInfobutton](#setinfobutton)
+
+
+### getId
+----
+#### :clock230: When?
+This method is used to get the id of checkbox.
+
+#### :pencil2: Example 
+```javascript
+  var row = handler.getId();
+```
+
+
+### setId
+----
+#### :clock230: When?
+This method is used to set the id of the checkbox
+
+#### :bookmark_tabs: Parameters
+**value:** _(Anything)_ The new id
+
+#### :pencil2: Example 
+```javascript
+  var records = handler.setId(value);
+```
+
 
 ### getValue
 ----
