@@ -213,10 +213,9 @@ This method is used to get the value of checkbox.
 #### :clock230: When?
 This method is used to set the value of the checkbox
 
-|   Params  |           Description                   |   Type   | Default |
-| --------- | --------------------------------------- | -------- | ------- |
-| value     | The new value                           | Anything | none    |
-| fireEvent | set if the change event has to be fired | Boolean  | false   |
+#### :bookmark_tabs: Parameters
+**value:** _(Anything)_ The new value <br>
+**fireEvent:** _(Boolean)_  Set if the change event has to be fired
 
 #### :pencil2: Example 
 ```javascript
@@ -240,9 +239,8 @@ This method returns the old value
 #### :clock230: When?
 This method change the old value.
 
-|   Params  |   Description   |   Type   | Default |
-| --------- | --------------- | -------- | ------- |
-| value     | The new value   | Anything | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Anything)_ The new value 
 
 #### :pencil2: Example
 ```javascript
@@ -270,9 +268,8 @@ This method changes the checkboz style.
 If true, the checkbox is shown at the right side of the label.
 If false, the checkbox is shown at the left side of the label. (Default)
 
-|   Params  |   Description   |   Type   | Default |
-| --------- | --------------- | -------- | ------- |
-| value     | The new value   | Boolean  | false   |
+#### :bookmark_tabs: Parameters
+**value:** _(Boolean)_ The new value
 
 #### :pencil2: Example
 ```javascript
@@ -287,9 +284,8 @@ function onSelectionChange(schematics, dbPanel) {
 #### :clock230: When?
 This method  change the checkbox tooltip.
 
-|   Params  |   Description     |   Type   | Default |
-| --------- | ----------------- | -------- | ------- |
-| value     | The new tooltip   | String   |  none   |
+#### :bookmark_tabs: Parameters
+**value:** _(String)_ The new tooltip
 
 #### :pencil2: Example
 ```javascript
@@ -304,9 +300,8 @@ function onSelectionChange(schematics, dbPanel) {
 #### :clock230: When?
 This method set a image to the checkbox label.
 
-|   Params  |   Description     |   Type   | Default |
-| --------- | ----------------- | -------- | ------- |
-| value     | Path to the image | String   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(String)_ Path to the image
 
 #### :pencil2: Example
 ```javascript
@@ -320,9 +315,8 @@ function onReady(schematics, dbPanel) {
 #### :clock230: When?
 This method changes the image height.
 
-|   Params  |   Description     |   Type   | Default |
-| --------- | ----------------- | -------- | ------- |
-| value     | New image height  | Number   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Number)_ New image height
 
 #### :pencil2: Example
 ```javascript
@@ -337,9 +331,8 @@ function onReady(schematics, dbPanel) {
 #### :clock230: When?
 This method changes the image width.
 
-|   Params  |   Description     |   Type   | Default |
-| --------- | ----------------- | -------- | ------- |
-| value     | New image width   | Number   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Number)_ New image width
 
 #### :pencil2: Example
 ```javascript
@@ -369,9 +362,8 @@ This method changes the checkbox visibility.
 If true is visible. (Default)
 If false is not visible.
 
-|   Params  |   Description         |   Type    | Default |
-| --------- | --------------------- | --------- | ------- |
-| value     | Checkbox visibility   | Boolean   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Boolean)_ Checkbox visibility
 
 #### :pencil2: Example
 ```javascript
@@ -401,9 +393,8 @@ function onSelectionChange(schematics, dbPanel) {
 #### :clock230: When?
 This method changes if the checkbox is enable or not.
 
-|   Params  |   Description         |   Type    | Default |
-| --------- | --------------------- | --------- | ------- |
-| value     | Checkbox Enabled      | Boolean   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Boolean)_ Checkbox Enabled
 
 #### :pencil2: Example
 ```javascript
@@ -433,9 +424,8 @@ function onSelectionChange(schematics, dbPanel) {
 #### :clock230: When?
 This method changes the read only property.
 
-|   Params  |   Description         |   Type    | Default |
-| --------- | --------------------- | --------- | ------- |
-| value     | Checkbox readOnly     | Boolean   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Boolean)_ Checkbox readOnly
 
 #### :pencil2: Example
 ```javascript
@@ -467,9 +457,8 @@ This method set the checkbox to the indeterminate mode, now the checkbox has a t
 Now it can be true value, undefined or null, false value.
 Default is disable.
 
-|   Params  |   Description                 |   Type    | Default |
-| --------- | ----------------------------- | --------- | ------- |
-| value     | Enable indeterminate mode     | Boolean   | none    |
+#### :bookmark_tabs: Parameters
+**value:** _(Boolean)_ Enable indeterminate mode
 
 #### :pencil2: Example
 ```javascript
