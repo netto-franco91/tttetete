@@ -197,107 +197,114 @@ onInfobuttonClick(code, value, nmAtributo, data){
   - [setInfobutton](#setinfobutton)
 
 ### getValue
+----
+#### :clock230: When?
+This method is used to get the value of checkbox.
 
-  This method is used to get the value of checkbox.
-
-Example:
-
-  ```javascript
-    var row = handler.getValue();
-  ```
+#### :pencil2: Example 
+```javascript
+  var row = handler.getValue();
+```
 
 ### setValue
-
-  This method is used to set the value of the checkbox
+This method is used to set the value of the checkbox
 
 |   Params  |           Description                   |   Type   | Default |
 | --------- | --------------------------------------- | -------- | ------- |
 | value     | The new value                           | Anything | none    |
 | fireEvent | set if the change event has to be fired | Boolean  | false   |
 
-Example:
+#### :pencil2: Example 
+```javascript
+  var records = handler.setValue(true, false);
+```
 
-  ```javascript
-    var records = handler.setValue(true, false);
-  ```
 
 ### getOldValue
+----
+#### :clock230: When?
+This method returns the old value
 
-  This method returns the old value
+#### :pencil2: Example
+```javascript
+  handler.getOldValue();
+```
 
-Example:
-
-  ```javascript
-    handler.getOldValue();
-  ```
 
 ### setOldValue
-
-  This method change the old value.
+----
+#### :clock230: When?
+This method change the old value.
 
 |   Params  |   Description   |   Type   | Default |
 | --------- | --------------- | -------- | ------- |
 | value     | The new value   | Anything | none    |
 
-Example:
+#### :pencil2: Example
+```javascript
+  handler.setOldValue(false);
+```
 
-  ```javascript
-    handler.setOldValue(false);
-  ```
 
 ### clearValue
+----
+#### :clock230: When?
+This method change de value to the true one.
 
-  This method change de value to the true one.
-
-Example:
-
+#### :pencil2: Example
 ```javascript
 function onSelectionChange(schematics, dbPanel) {
     dbPanel.getGridHandler().getAttribute("CHECKBOX").clearValue();
 }
 ```
 
-### setOnRight
 
-  This method changes the checkboz style.
-  If true, the checkbox is shown at the right side of the label.
-  If false, the checkbox is shown at the left side of the label. (Default)
+### setOnRight
+----
+#### :clock230: When?
+This method changes the checkboz style.
+If true, the checkbox is shown at the right side of the label.
+If false, the checkbox is shown at the left side of the label. (Default)
 
 |   Params  |   Description   |   Type   | Default |
 | --------- | --------------- | -------- | ------- |
 | value     | The new value   | Boolean  | false   |
 
-
-Example:
-
+#### :pencil2: Example
 ```javascript
 function onSelectionChange(schematics, dbPanel) {
     dbPanel.getGridHandler().getAttribute("CHECKBOX").setOnRight(true);
 }
 ```
 
-### setToolTip
 
-  This method  change the checkbox tooltip.
+### setToolTip
+----
+#### :clock230: When?
+This method  change the checkbox tooltip.
 
 |   Params  |   Description     |   Type   | Default |
 | --------- | ----------------- | -------- | ------- |
 | value     | The new tooltip   | String   |  none   |
 
+#### :pencil2: Example
 ```javascript
 function onSelectionChange(schematics, dbPanel) {
     dbPanel.getGridHandler().getAttribute("CHECKBOX").setToolTip('tests');
 }
 ```
 
-### setImgSrc
 
-  This method set a image to the checkbox label.
+### setImgSrc
+----
+#### :clock230: When?
+This method set a image to the checkbox label.
 
 |   Params  |   Description     |   Type   | Default |
 | --------- | ----------------- | -------- | ------- |
 | value     | Path to the image | String   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onReady(schematics, dbPanel) {
     dbPanel.getGridHandler().getAttribute("CHECKBOX").setImgSrc('assets/images/checkbox_image.jpeg');
@@ -305,66 +312,77 @@ function onReady(schematics, dbPanel) {
 ```
 
 ### setImgHeight
-
-  This method changes the image height.
+----
+#### :clock230: When?
+This method changes the image height.
 
 |   Params  |   Description     |   Type   | Default |
 | --------- | ----------------- | -------- | ------- |
 | value     | New image height  | Number   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onReady(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setImgHeight(20);
 }
 ```  
 
-### setImgWidth
 
-  This method changes the image width.
+### setImgWidth
+----
+#### :clock230: When?
+This method changes the image width.
 
 |   Params  |   Description     |   Type   | Default |
 | --------- | ----------------- | -------- | ------- |
 | value     | New image width   | Number   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onReady(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setImgWidth(20);
 }
 ```
 
+
 ### setFocus
+----
+#### :clock230: When?
+This method set the focus to the checkbox
 
-  This method set the focus to the checkbox
-
+#### :pencil2: Example
 ```javascript
 function onDetailOpen(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setFocus();
 }
 ```  
 
-### setBlur
 
 ### setVisible
-
-  This method changes the checkbox visibility.
-  If true is visible. (Default)
-  If false is not visible.
+----
+#### :clock230: When?
+This method changes the checkbox visibility.
+If true is visible. (Default)
+If false is not visible.
 
 |   Params  |   Description         |   Type    | Default |
 | --------- | --------------------- | --------- | ------- |
 | value     | Checkbox visibility   | Boolean   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onDetailOpen(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setVisible(false);
 }
 ```
 
+
 ### isVisible
+----
+#### :clock230: When?
+This method return if the checkbox is visible or not.
 
-  This method return if the checkbox is visible or not.
-
-
+#### :pencil2: Example
 ```javascript
 function onSelectionChange(schematics, dbPanel) {
   if(dbPanel.getGridHandler().getAttribute("CHECKBOX").isVisible()){
@@ -373,24 +391,30 @@ function onSelectionChange(schematics, dbPanel) {
 }
 ```
 
-### setEnabled
 
-  This method changes if the checkbox is enable or not.
+### setEnabled
+----
+#### :clock230: When?
+This method changes if the checkbox is enable or not.
 
 |   Params  |   Description         |   Type    | Default |
 | --------- | --------------------- | --------- | ------- |
 | value     | Checkbox Enabled      | Boolean   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onDetailOpen(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setEnabled(false);
 }
 ```
 
+
 ### isEnabled
+----
+#### :clock230: When?
+This method returns if the checkbox is enable or not.
 
-  This method returns if the checkbox is enable or not.
-
+#### :pencil2: Example
 ```javascript
 function onSelectionChange(schematics, dbPanel) {
   if(dbPanel.getGridHandler().getAttribute("CHECKBOX").isEnabled()){
@@ -399,24 +423,30 @@ function onSelectionChange(schematics, dbPanel) {
 }
 ```
 
-### setReadOnly
 
-  This method changes the read only property.
+### setReadOnly
+----
+#### :clock230: When?
+This method changes the read only property.
 
 |   Params  |   Description         |   Type    | Default |
 | --------- | --------------------- | --------- | ------- |
 | value     | Checkbox readOnly     | Boolean   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onDetailOpen(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setReadOnly(true);
 }
 ```
 
+
 ### isReadOnly
+----
+#### :clock230: When?
+This method return if the checkbox is read only or not.
 
-  This method return if the checkbox is read only or not.
-
+#### :pencil2: Example
 ```javascript
 function onSelectionChange(schematics, dbPanel) {
   if(dbPanel.getGridHandler().getAttribute("CHECKBOX").isReadOnly()){
@@ -425,28 +455,32 @@ function onSelectionChange(schematics, dbPanel) {
 }
 ```
 
-### setIndeterminateMode
 
-  This method set the checkbox to the indeterminate mode, now the checkbox has a third state.
-  Now it can be true value, undefined or null, false value.
-  Default is disable.
+### setIndeterminateMode
+----
+#### :clock230: When?
+This method set the checkbox to the indeterminate mode, now the checkbox has a third state.
+Now it can be true value, undefined or null, false value.
+Default is disable.
 
 |   Params  |   Description                 |   Type    | Default |
 | --------- | ----------------------------- | --------- | ------- |
 | value     | Enable indeterminate mode     | Boolean   | none    |
 
+#### :pencil2: Example
 ```javascript
 function onReady(schematics, dbPanel) {
   dbPanel.getGridHandler().getAttribute("CHECKBOX").setIndeterminateMode(true);
 }
 ```
 
-### getLabel
 
+### getLabel
+----
+#### :clock230: When?
 This method returns the label of the checkbox
 
-#### Example
-
+#### :pencil2: Example
 ```javascript
 function myMethod() {
   let checkbox = detailHandler.getAttribute('CHECKBOX');
@@ -454,12 +488,13 @@ function myMethod() {
 }
 ```
 
-### setLabel
 
+### setLabel
+----
+#### :clock230: When?
 This method change the label of the checkbox
 
-#### Example
-
+#### :pencil2: Example
 ```javascript
 function myMethod() {
   let checkbox = detailHandler.getAttribute('CHECKBOX');
@@ -469,7 +504,6 @@ function myMethod() {
 
 
 ### setInfobutton
-
 ----
 #### :page_with_curl: Description
 Add an icon on right of the component.
