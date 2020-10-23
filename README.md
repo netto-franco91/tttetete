@@ -2,379 +2,277 @@
 
 Timeline vision table mode is option vision of the timeline.
 
-- [Event Listeners](#Event-Listeners)
-- [Handler Methods](#Handler-Methods)
-- [Design spec](http://design.emr.philips.com.br/library/wip/components/informational/dynamic-flowchart/)
+- [Methods](#Methods)
 - [Timeline Table Mode Detail](#Timeline-Table-Mode-Detail)
+- [Timeline Table Mode Comment](#Timeline-Table-Mode-Comment)
+- [Design spec](http://design.emr.philips.com.br/library/wip/components/informational/dynamic-flowchart/)
 
+
+## Methods
+- [renderValues](#renderValues)
+- [createTableItem](#createTableItem)
+- [onTableItemClick](#onTableItemClick)
+- [saveTableItemValue](#saveTableItemValue)
+- [fireEventTableModeItemChange](#fireEventTableModeItemChange)
+- [onTableItemDetail](#onTableItemDetail)
+- [onLoadTimelineTableItemDetail](#onLoadTimelineTableItemDetail)
+- [onChangeTableModeDatePicker](#onChangeTableModeDatePicker)
+- [closePopoverTimelineItemDetail](#closePopoverTimelineItemDetail)
+- [getPopoverTimelineTableItemDetail](#getPopoverTimelineTableItemDetail)
+- [saveTableItemDetail](#saveTableItemDetail)
+- [showPopover](#showPopover)
+- [onChangeTableModeItem](#onChangeTableModeItem)
+- [attachEventListener](#attachEventListener)
+- [destroy](#destroy)
+- [editDetailTimelineItemTableMode ](#editDetailTimelineItemTableMode )
+- [addCommentTimelineItemTableMode ](#addCommentTimelineItemTableMode )
+- [getPopoverTimelineTableItemComment ](#getPopoverTimelineTableItemComment )
+- [removeTimelineItemTableMode ](#removeTimelineItemTableMode )
+
+
+### renderValues
+----
+#### :page_with_curl: Description
+Creates the visual representation of the table mode with the click function and with its values when it has
+
+#### :bookmark_tabs: Parameters
+**element** _(DOM element)_ Element being created in the DOM with click function attached
+**visItem** _(Object)_ Vis item containing all the properties to be used
+**item** _(Object)_ Item that has come from timeline component datasource
 
 #### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const config = {
-      start: moment(),
-      end: moment().add(1, 'd'),
-      groupId: 'NR_SEQUENCIA',
-      gap: 2,
-    };
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    settingBarHandler.setConfig(moment().add(5, 'days'));
-  }
-}
-```
-
-### getCurrent
+### createTableItem
 ----
 #### :page_with_curl: Description
-Get the current date of the component
+It creates an item to be used when timeline is in table mode
+
+#### :bookmark_tabs: Parameters
+**visItem** _(Object)_ Vis item containing all the properties to be used
+**item** _(Object)_ Item that has come from timeline component datasource
+
+#### :leftwards_arrow_with_hook: Return
+_(DOM element)_ - Returns an element created to be attacked in the DOM. Used to display a cell in table mode.
+
+
+### onTableItemClick
+----
+#### :page_with_curl: Description
+Action of click event to handle a table mode item
+
+#### :bookmark_tabs: Parameters
+**visItem** _(Object)_ Vis item containing all the properties to be used
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### saveTableItemValue
+----
+#### :page_with_curl: Description
+Function that makes the necessary changes when changing values in an item in table mode
+
+#### :bookmark_tabs: Parameters
+**nmAtributo** _(String)_ Cell attribute name
+**value** _(String)_ Value entered in the selected cell field
+**save** _(boolean)_ Validation to perform the visual change when saving is performed. Default value true
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### fireEventTableModeItemChange
+----
+#### :page_with_curl: Description
+Function that fire event 'onTableModeItemChange' of the timeline
+
+#### :bookmark_tabs: Parameters
+**data** _(Object)_ - Data to fire envet onTableModeItemChange
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### onTableItemDetail
+----
+#### :page_with_curl: Description
+Function that calls the creation of the detail popover component for grouped editing
+
+#### :bookmark_tabs: Parameters
+**event** _(Object)_ - Event fired to call the function
+**visItem** _(Object)_ Vis item containing all the properties to be used
+**item** _(Object)_ Item that has come from timeline component datasource
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### onLoadTimelineTableItemDetail
+----
+#### :page_with_curl: Description
+Function called when the 'onLoad' event of the 'timeline-table-item-detail' component is fired
+Event [onLoad](#onLoad) of the component 'timeline-table-item-detail'.
+
+#### :bookmark_tabs: Parameters
+**handler** _(Object)_ - Handler of the component timeline-table-item-detail
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### onChangeTableModeDatePicker
+----
+#### :page_with_curl: Description
+Function called when the 'onTableModeDatePickerChange' event of the 'timeline-table-item-detail' component is fired
+Event [onTableModeDatePickerChange](#onTableModeDatePickerChange) of the component 'timeline-table-item-detail'.
+
+#### :bookmark_tabs: Parameters
+**event** _(Object)_  - Event data as an object
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### closePopoverTimelineItemDetail 
+----
+#### :page_with_curl: Description
+Function called when the 'onDestroy' event of the 'timeline-table-item-detail' component is fired
+Event [onDestroy](#onDestroy) of the component 'timeline-table-item-detail'.
 
 #### :bookmark_tabs: Parameters
 Not available
 
 #### :leftwards_arrow_with_hook: Return
-_(Object)_ - Current date time
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.log(settingBarHandler.getCurrent());
-  }
-}
-```
-
-### setCurrent
-----
-#### :page_with_curl: Description
-Set the current date of the component
-
-#### :bookmark_tabs: Parameters
-**current** _(Object)_ Moment to represent the current date
-
-#### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    settingBarHandler.setCurrent(moment().add(5, 'days'));
-  }
-}
-```
-
-### getCustomClass
+### getPopoverTimelineTableItemDetail
 ----
 #### :page_with_curl: Description
-It retrieves the custom class previously set
+Create the template of the popover of the component 'timeline-table-item-detail' with us directives 
 
 #### :bookmark_tabs: Parameters
 Not available
 
 #### :leftwards_arrow_with_hook: Return
-_(String)_ - custom class name
+Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.log(settingBarHandler.getCustomClass());
-  }
-}
-```
-
-### setCustomClass
+### saveTableItemDetail
 ----
 #### :page_with_curl: Description
-It adds a class in the main container of timeline header
+Function called when the 'onSaveTableItemDetail' event of the 'timeline-table-item-detail' component is fired
+Event [onSaveTableItemDetail](#onSaveTableItemDetail) of the component 'timeline-table-item-detail'.
 
 #### :bookmark_tabs: Parameters
-**customClass** _(String)_ - custom class name
+**event** _(Object)_  - Event data as an object
 
 #### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    settingBarHandler.setCustomClass('my-custom-class');
-  }
-}
-```
-
-### setDataSourceItems
+### showPopover
 ----
 #### :page_with_curl: Description
-It sets a new datasource into timeline model to be used in the next time draw() method be called.
+Function that show popover
 
 #### :bookmark_tabs: Parameters
-**items** _(Object)_ - VIS items
+**event** _(Object)_  - Event data as an object
+**element** _(HTML)_  - Template with component structure 'timeline-table-item-detail' created
+**config** _(Object)_  - Configuration of the display the popover
 
 #### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-    const items = // list of items;
-
-    settingBarHandler.setDataSourceItems(items);
-  }
-}
-```
-
-### getDataSourceItems
+### onChangeTableModeItem
 ----
 #### :page_with_curl: Description
-It retrieves the custom data source previously set
+Function called when the 'onTableModeItemChange' event of the 'timeline-table-item-detail' component is fired
+Event [onTableModeItemChange](#onTableModeItemChange) of the component 'timeline-table-item-detail'.
 
 #### :bookmark_tabs: Parameters
-Not available
-
-#### :leftwards_arrow_with_hook: Return
-_(Object)_ - VIS items
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.table(settingBarHandler.getDataSourceItems());
-  }
-}
-```
-
-### addTimelineButtons
-----
-#### :page_with_curl: Description
-It adds custom buttons in timeline edges.
-
-#### :bookmark_tabs: Parameters
-**jump** _(int)_  - The amount of time in minutes that when the button is clicked should change in timeline range
-**callback** _(Function)_ - A callback to be executed at the end of the process
+**event** _(Object)_  - Event data as an object
 
 #### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    settingBarHandler.addTimelineButtons(250, () => {
-      // do shomething here
-    });
-  }
-}
-```
-
-### setFlagDescriptionFormatter
+### editDetailTimelineItemTableMode
 ----
 #### :page_with_curl: Description
-It sets a custom formatter to render in a new way the label inside datetimepicker area.
+This method is used to open the editing popover by the right mouse button event of the timeline vision table mode 
 
 #### :bookmark_tabs: Parameters
-**fn** _(Function)_  - The new formatter that must return a String.
+**data** _(Object)_ Vis item containing all the properties to be used
 
 #### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    settingBarHandler.setFlagDescriptionFormatter(() => moment(this.myCurrentDate).format('LT'));
-  }
-}
-```
-
-### setLayoutTimeline
+### addCommentTimelineItemTableMode
 ----
 #### :page_with_curl: Description
-Define the columns layout of the Timeline<br>
-The schematics layout recommended is 12 columns to provide better visualization of<br>
-data list and Timeline.<br>
-Within 12 columns the full layout uses 6x6, 4x8, 8x4 (Data list x Timeline).<br>
-To define Timeline you can choose 4, 8 or 6 columns and pass as a parameter.<br>
-Setting a different value, the Timeline will assume the default option of 6 columns.<br>
+This method is used to open the comment popover by the right mouse button event of the timeline vision table mode 
 
 #### :bookmark_tabs: Parameters
-**columns** _(number)_  - The number of columns to be used in timeline layout
+**data** _(Object)_ Vis item containing all the properties to be used
 
 #### :leftwards_arrow_with_hook: Return
 Not available
 
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
 
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-    const columnsCount = 8; 
-
-    settingBarHandler.setLayoutTimeline(columnsCount);
-  }
-}
-```
-
-### getAutocompleteHandler
+### getPopoverTimelineTableItemComment
 ----
 #### :page_with_curl: Description
-Return autocomplete component handler 
+Create the template of the comment popover
+
+#### :bookmark_tabs: Parameters
+**template** _(HTML)_ Template of display of the comment popover 
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### removeTimelineItemTableMode
+----
+#### :page_with_curl: Description
+This method is used to remove the values of the cell by the right mouse button event of the timeline vision table mode 
+
+#### :bookmark_tabs: Parameters
+**data** _(Object)_ Vis item containing all the properties to be used
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### attachEventListener
+----
+#### :page_with_curl: Description
+This method is used to attach events in components
+
+#### :bookmark_tabs: Parameters
+**element** _(DOM element)_ Dom element
+**event** _(String)_ Type event to attach in element
+**callback** _(Function)_ Function that will be executed in the event
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### destroy
+----
+#### :page_with_curl: Description
+This method is used to destroy and remove the component from the DOM tree
 
 #### :bookmark_tabs: Parameters
 Not available
 
 #### :leftwards_arrow_with_hook: Return
-_(Object)_ - Autocomplete handler
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.log(settingBarHandler.getAutocompleteHandler());
-  }
-}
-```
-
-### getDatePickerHandler
-----
-#### :page_with_curl: Description
-Return datepicker component handler 
-
-#### :bookmark_tabs: Parameters
 Not available
 
-#### :leftwards_arrow_with_hook: Return
-_(Object)_ - datepicker handler
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.log(settingBarHandler.getDatePickerHandler());
-  }
-}
-```
-
-### getIntervalListBoxHandler
-----
-#### :page_with_curl: Description
-Return interval listbox component handler 
-
-#### :bookmark_tabs: Parameters
-Not available
-
-#### :leftwards_arrow_with_hook: Return
-_(Object)_ - interval listbox handler
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.log(settingBarHandler.getIntervalListBoxHandler());
-  }
-}
-```
-
-### getGapListBoxHandler
-----
-#### :page_with_curl: Description
-Return gap listbox component handler 
-
-#### :bookmark_tabs: Parameters
-Not available
-
-#### :leftwards_arrow_with_hook: Return
-_(Object)_ - gap listbox handler
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    console.log(settingBarHandler.getGapListBoxHandler());
-  }
-}
-```
-
-### setDatePickerMode
-----
-#### :page_with_curl: Description
-It sets the new mode that datetimepicker should be.
-
-#### :bookmark_tabs: Parameters
-**mode** _(Object)_ - The new [mode](./../../w-datetime-picker/w-datetime-picker.constant.js) that datetimepicker should obey.
-
-#### :leftwards_arrow_with_hook: Return
-Not available
-
-#### :pencil2: Example
-```javascript
-@Controller({ domain: 'atePac/atePac', code: 123456 })
-export default class Timeline extends Timeline {
-
-  onLoad(schematics, timeline) {
-    const settingBarHandler = timelineHandler.getTimelineSettingBarHandler();
-
-    settingBarHandler.setDatePickerMode(DateTimePickerOptions.MODE.DATE_TIME_SHORT);
-  }
-}
-```
 
 # Timeline Table Mode Detail
 
@@ -486,7 +384,7 @@ export default class Timeline extends Timeline {
 ## Handler Methods
 - [setData](#setData)
 
-### setConfig
+### setData
 ----
 #### :page_with_curl: Description
 It sets values ​​to assemble the detail popover for grouped editing.
@@ -504,3 +402,120 @@ item: object - Item that has come from timeline component datasource
   value: String - Value of the cell and that is used to assemble editing line. When type is tablemode
   comment: String - Value do comment of the cell
 ```
+
+
+# Timeline Table Mode Comment
+
+Table mode comment is used to remove and add a comment in the cell.
+
+- [Methods Comment](#Methods-Comment)
+
+
+## Methods Comment
+- [createCommentTimelineTableItem](#createCommentTimelineTableItem)
+- [createTemplateComment](#createTemplateComment)
+- [registerCommentButtonAction](#registerCommentButtonAction)
+- [createTextArea](#createTextArea)
+- [saveTableItemValue](#saveTableItemValue)
+- [renderComment](#renderComment)
+- [loadTableItemCommentMessages](#loadTableItemCommentMessages)
+- [setTextsElements](#setTextsElements)
+
+
+### createCommentTimelineTableItem
+----
+#### :page_with_curl: Description
+Function that set value data item and call function 'createTemplateComment'.
+
+#### :bookmark_tabs: Parameters
+**data** _(Object)_ Values item selected
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### createTemplateComment 
+----
+#### :page_with_curl: Description
+Creates the visual representation of the comment popover
+
+#### :bookmark_tabs: Parameters
+**data** _(Object)_ Values item selected
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### registerCommentButtonAction
+----
+#### :page_with_curl: Description
+Register the actions of the comment popover buttons
+
+#### :bookmark_tabs: Parameters
+**data** _(Object)_ Value returned from popover after creation 
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### createTextArea
+----
+#### :page_with_curl: Description
+Method that create the component items textarea
+
+#### :bookmark_tabs: Parameters
+**data.visItem** _(Object)_ Vis item containing all the properties to be used
+**data.item** _(Object)_ Item that has come from timeline component datasource
+
+#### :leftwards_arrow_with_hook: Return
+ _(component)_ - Component textarea
+
+
+### saveTableItemValue
+----
+#### :page_with_curl: Description
+Function that makes the necessary changes when changing values of a comment
+
+#### :bookmark_tabs: Parameters
+Not available
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### renderComment
+----
+#### :page_with_curl: Description
+Creates the comment in table mode when the cell has the same, using tooltip
+
+#### :bookmark_tabs: Parameters
+**element** _(DOM element)_ Element being created in the DOM with its respective comment using tooltip
+**comment** _(String)_ String to be rendered inside tooltip
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### loadTableItemCommentMessages
+----
+#### :page_with_curl: Description
+Method that requests to backend all the texts used in a context table mode comment
+
+#### :bookmark_tabs: Parameters
+Not available
+
+#### :leftwards_arrow_with_hook: Return
+Not available
+
+
+### setTextsElements
+----
+#### :page_with_curl: Description
+Method to set texts of the elements
+
+#### :bookmark_tabs: Parameters
+**selector** _(String)_ Selector javascript of the element
+**text** _(String)_ Text set of the element
+
+#### :leftwards_arrow_with_hook: Return
+Not available
