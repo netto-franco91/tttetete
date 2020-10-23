@@ -54,7 +54,7 @@ It creates an item to be used when timeline is in table mode
 **item** _(Object)_ Item that has come from timeline component datasource
 
 #### :leftwards_arrow_with_hook: Return
-_(DOM element)_ - Returns an element created to be attacked in the DOM. Used to display a cell in table mode.
+_(DOM element)_ - Returns an element created to be attached in the DOM. Used to display a cell in table mode.
 
 
 ### onTableItemClick
@@ -112,11 +112,11 @@ Not available
 ### onLoadTimelineTableItemDetail
 ----
 #### :page_with_curl: Description
-Function called when the 'onLoad' event of the 'timeline-table-item-detail' component is fired
-Event [onLoad](#onLoad) of the component 'timeline-table-item-detail'.
+Function called when the 'onLoad' event of the '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' component is fired
+Event [onLoad](#onLoad) of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)'.
 
 #### :bookmark_tabs: Parameters
-**handler** _(Object)_ - Handler of the component timeline-table-item-detail
+**handler** _(Object)_ - Handler of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)'
 
 #### :leftwards_arrow_with_hook: Return
 Not available
@@ -125,8 +125,8 @@ Not available
 ### onChangeTableModeDatePicker
 ----
 #### :page_with_curl: Description
-Function called when the 'onTableModeDatePickerChange' event of the 'timeline-table-item-detail' component is fired
-Event [onTableModeDatePickerChange](#onTableModeDatePickerChange) of the component 'timeline-table-item-detail'.
+Function called when the 'onTableModeDatePickerChange' event of the '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' component is fired
+Event [onTableModeDatePickerChange](#onTableModeDatePickerChange) of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)'.
 
 #### :bookmark_tabs: Parameters
 **event** _(Object)_  - Event data as an object
@@ -138,8 +138,8 @@ Not available
 ### closePopoverTimelineItemDetail 
 ----
 #### :page_with_curl: Description
-Function called when the 'onDestroy' event of the 'timeline-table-item-detail' component is fired
-Event [onDestroy](#onDestroy) of the component 'timeline-table-item-detail'.
+Function called when the 'onDestroy' event of the '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' component is fired
+Event [onDestroy](#onDestroy) of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)'.
 
 #### :bookmark_tabs: Parameters
 Not available
@@ -151,7 +151,7 @@ Not available
 ### getPopoverTimelineTableItemDetail
 ----
 #### :page_with_curl: Description
-Create the template of the popover of the component 'timeline-table-item-detail' with us directives 
+Create the template of the popover of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' with us directives 
 
 #### :bookmark_tabs: Parameters
 Not available
@@ -163,8 +163,8 @@ Not available
 ### saveTableItemDetail
 ----
 #### :page_with_curl: Description
-Function called when the 'onSaveTableItemDetail' event of the 'timeline-table-item-detail' component is fired
-Event [onSaveTableItemDetail](#onSaveTableItemDetail) of the component 'timeline-table-item-detail'.
+Function called when the 'onSaveTableItemDetail' event of the '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' component is fired
+Event [onSaveTableItemDetail](#onSaveTableItemDetail) of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)'.
 
 #### :bookmark_tabs: Parameters
 **event** _(Object)_  - Event data as an object
@@ -180,7 +180,7 @@ Function that show popover
 
 #### :bookmark_tabs: Parameters
 **event** _(Object)_  - Event data as an object
-**element** _(HTML)_  - Template with component structure 'timeline-table-item-detail' created
+**element** _(HTML)_  - Template with component structure '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' created
 **config** _(Object)_  - Configuration of the display the popover
 
 #### :leftwards_arrow_with_hook: Return
@@ -190,8 +190,8 @@ Not available
 ### onChangeTableModeItem
 ----
 #### :page_with_curl: Description
-Function called when the 'onTableModeItemChange' event of the 'timeline-table-item-detail' component is fired
-Event [onTableModeItemChange](#onTableModeItemChange) of the component 'timeline-table-item-detail'.
+Function called when the 'onTableModeItemChange' event of the '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)' component is fired
+Event [onTableModeItemChange](#onTableModeItemChange) of the component '[onLoadTimelineTableItemDetail](#Timeline-Table-Mode-Detail)'.
 
 #### :bookmark_tabs: Parameters
 **event** _(Object)_  - Event data as an object
