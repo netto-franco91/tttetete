@@ -51,8 +51,8 @@ Endpoint to be used to get a flowsheet metadata.
 
 #### :leftwards_arrow_with_hook: Return
 **FlowsheetMetadata:** _(object)_ - Object containing flowsheet sections and timeline properties. <br />
-    - **timelineProperties** _(FlowsheetTimelineProperties)_ - Properties to start the flowsheet timeline. <br />
-    - **sections** _(List<FlowsheetSectionMetadata>)_ - List of sessions to be loaded into the flowsheet. <br />
+  - **timelineProperties** _(FlowsheetTimelineProperties)_ - Properties to start the flowsheet timeline. <br />
+  - **sections** _(List<FlowsheetSectionMetadata>)_ - List of sessions to be loaded into the flowsheet. <br />
 :warning: _(throws)_ - Exception - If some error occurs during fetching its metadata. <br />
 
 #### :pencil2: Example
@@ -67,7 +67,7 @@ Endpoint to be used to get a flowsheet datasource.
 
 #### :leftwards_arrow_with_hook: Return
 **FlowsheetDatasource:** _(object)_ - Object containing flowsheet datasource (values to be shown in its datagrid rows) and its timelines items. <br />
-    - **sections** _(List<FlowsheetSectionDatasource>)_ - List of values ​​to be loaded from the flowsheet. <br />
+  - **sections** _(List<FlowsheetSectionDatasource>)_ - List of values ​​to be loaded from the flowsheet. <br />
 :warning: _(throws)_ - Exception - If some error occurs during fetching its datasource. <br />
 
 
@@ -94,18 +94,18 @@ Endpoint to be used in order to return a specific section metadata.
 
 #### :leftwards_arrow_with_hook: Return
 **FlowsheetSectionMetadata:** _(object)_ - Section metadata values. <br />
-    - **rowValues** _(List<FlowsheetMetadataRow>)_ - Grid line with table mode data, description of the line, meta attribute, id line and values of the column custom list. <br />
-        - **id** _(String)_ - Identification id. <br />
-        - **description** _(String)_ - Description of line of the Metadata. <br />
-        - **timelineTableRow** _(FlowsheetTimelineTableRow)_ - A class containing all the information needed to build timeline table items. <br />
-            - **metaAtribute** _(MetaAtributo)_ - Attribute in order to be used to build the visual component that will be used to edit values (listbox, textboxes, segmented-control, datetime picker...). <br />
-            - **timelineTableValues** _(List)_ - List to be used to send the values saved in a specific time (multiples values in the same date range, will build the popover in the timeline cell (+2, +3...). TimelineValue contains the following attributes: value (Object) and start (LocalDateTime). <br />
-            - **timelineTableComments** _(List)_ - A list to send all the comments applied in a specific time. TimelineTableComment contains the following attributes: value (Object) and start (LocalDateTime). <br />
-        - **timelineTableItems** _(List<TimelineTableDefaultItem>)_ - **Exclusive use of the framework**. <br />
-        - **listValueCustomColumn** _(List<TimelineCustomColumn>)_ - List of custom columns. Class values: value and id. <br />
-    - **linkedDataId** _(Integer)_ - Id Linked Data. <br />
-    - **title** _(String)_ - Section description. <br />
-    - **listCustomColumn** _(List<FlowsheetCustomColumn>)_ - List of custom columns. <br />
+  - **rowValues** _(List<FlowsheetMetadataRow>)_ - Grid line with table mode data, description of the line, meta attribute, id line and values of the column custom list. <br />
+    - **id** _(String)_ - Identification id. <br />
+    - **description** _(String)_ - Description of line of the Metadata. <br />
+    - **timelineTableRow** _(FlowsheetTimelineTableRow)_ - A class containing all the information needed to build timeline table items. <br />
+    - **metaAtribute** _(MetaAtributo)_ - Attribute in order to be used to build the visual component that will be used to edit values (listbox, textboxes, segmented-control, datetime picker...). <br />
+      - **timelineTableValues** _(List)_ - List to be used to send the values saved in a specific time (multiples values in the same date range, will build the popover in the timeline cell (+2, +3...). TimelineValue contains the following attributes: value (Object) and start (LocalDateTime). <br />
+      - **timelineTableComments** _(List)_ - A list to send all the comments applied in a specific time. TimelineTableComment contains the following attributes: value (Object) and start (LocalDateTime). <br />
+      - **timelineTableItems** _(List<TimelineTableDefaultItem>)_ - **Exclusive use of the framework**. <br />
+      - **listValueCustomColumn** _(List<TimelineCustomColumn>)_ - List of custom columns. Class values: value and id. <br />
+  - **linkedDataId** _(Integer)_ - Id Linked Data. <br />
+  - **title** _(String)_ - Section description. <br />
+  - **listCustomColumn** _(List<FlowsheetCustomColumn>)_ - List of custom columns. <br />
 :warning: _(throws)_ - Exception - If some error occurs during fetching its form metadata. <br />
 
 #### :pencil2: Example
@@ -122,16 +122,16 @@ Endpoint to be used in order to return a specific section datasource.
 
 #### :leftwards_arrow_with_hook: Return
 **FlowsheetSectionDatasource:** _(object)_ - Section datasource values. <br />
-    - **rowValues** _(List<FlowsheetDatasourceRow>)_ - List with the values ​​of the chart and timeline mode (default view), which are used to assemble the views. <br />
-        - **timelineItems** _(List<WTimelineItem>)_ - Items to load data from the timeline view (default). <br />
-        - **chartItems** _(List<WTimelineItem>)_ - Items to load the chart view. <br />
-        - **metadataRowId** _(String)_ - Id row. <br />
-        - **minValue** _(int)_ - Minimum value for displaying the chart. <br />
-        - **maxValue** _(int)_ - Maximum value for displaying the chart. <br />
-        - **avgValue** _(double)_ - Average value for displaying the chart. <br />
-        - **value** _(String)_ - Row value. <br />
-        - **id** _(String)_ - Identification id. <br />
-    - **linkedDataId** _(Integer)_ - Id Linked Data. <br />
+  - **rowValues** _(List<FlowsheetDatasourceRow>)_ - List with the values ​​of the chart and timeline mode (default view), which are used to assemble the views. <br />
+    - **timelineItems** _(List<WTimelineItem>)_ - Items to load data from the timeline view (default). <br />
+    - **chartItems** _(List<WTimelineItem>)_ - Items to load the chart view. <br />
+    - **metadataRowId** _(String)_ - Id row. <br />
+    - **minValue** _(int)_ - Minimum value for displaying the chart. <br />
+    - **maxValue** _(int)_ - Maximum value for displaying the chart. <br />
+    - **avgValue** _(double)_ - Average value for displaying the chart. <br />
+    - **value** _(String)_ - Row value. <br />
+    - **id** _(String)_ - Identification id. <br />
+  - **linkedDataId** _(Integer)_ - Id Linked Data. <br />
 :warning: _(throws)_ - Exception - If some error occurs during fetching its form metadata. <br />
 
 #### :pencil2: Example
