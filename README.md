@@ -108,17 +108,17 @@ Endpoint to be used to get a flowsheet metadata.
             "title": "Vital signs",
             "rowValues": [{
                 "0": {
-                    "description": "Abdominal,
+                    "description": "Abdominal",
                     "id": "2196981",
-                    "timelineTableItems: [{"@class": "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineTableItem",…},…],
-                    "listValueCustomColumn: [{"@class": "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineCustomColumn",…},…],
-                    "timelineTableRow: {"metaAtribute": {"@class": "br.com.wheb.vo.componentes.metaData.MetaAtributo", "componente": "TEXTBOX",…}}
+                    "timelineTableItems": [{"@class": "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineTableItem",…},…],
+                    "listValueCustomColumn": [{"@class": "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineCustomColumn",…},…],
+                    "timelineTableRow": {"metaAtribute": {"@class": "br.com.wheb.vo.componentes.metaData.MetaAtributo", "componente": "TEXTBOX",…}}
                 }
             }]
         }
     }],
     "timelineProperties": {
-        ""@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetTimelineProperties",
+        "@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetTimelineProperties",
         "groupId": "ID",
         "timelineGap": 2,
         "timelineLength": 24,
@@ -165,7 +165,7 @@ Endpoint to be used to get a flowsheet datasource.
                 "0": {
                     "avgValue": 50.75,
                     "chartItems": [{
-                        0": {
+                        "0": {
                             "color": "#3262DB",
                             "data": {"element": "ArrowAverage1", "info": ["Nurse - Flávia Miranda", "<div>Heart Rate: 78bpm</div>"]},
                             "id": "37120687432105502",
