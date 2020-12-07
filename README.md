@@ -101,7 +101,7 @@ Endpoint to be used to get a flowsheet metadata.
 **Response Payload:**
 ```json
 {
-    "@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetMetadata"
+    "@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetMetadata",
     "sections": [
         "0": {
             "linkedDataId": 178,
@@ -109,10 +109,10 @@ Endpoint to be used to get a flowsheet metadata.
             "rowValues": [{
                 "0": {
                     "description": "Abdominal,
-                    "id": "2196981,
-                    "timelineTableItems: [{@class: "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineTableItem",…},…],
-                    "listValueCustomColumn: [{@class: "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineCustomColumn",…},…],
-                    "timelineTableRow: {metaAtribute: {@class: "br.com.wheb.vo.componentes.metaData.MetaAtributo", componente: "TEXTBOX",…}}
+                    "id": "2196981",
+                    "timelineTableItems: [{"@class": "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineTableItem",…},…],
+                    "listValueCustomColumn: [{"@class": "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineCustomColumn",…},…],
+                    "timelineTableRow: {"metaAtribute": {"@class": "br.com.wheb.vo.componentes.metaData.MetaAtributo", "componente": "TEXTBOX",…}}
                 }
             }]
         }
@@ -167,11 +167,11 @@ Endpoint to be used to get a flowsheet datasource.
                     "chartItems": [{
                         0": {
                             "color": "#3262DB",
-                            "data": {element: "ArrowAverage1", info: ["Nurse - Flávia Miranda", "<div>Heart Rate: 78bpm</div>"]},
+                            "data": {"element": "ArrowAverage1", "info": ["Nurse - Flávia Miranda", "<div>Heart Rate: 78bpm</div>"]},
                             "id": "37120687432105502",
                             "maxValue": 83,
                             "minValue": 36,
-                            "start": {tipo: "INSTANT", @class: "java.time.Instant", value: "2020-12-07T07:00:00Z"},
+                            "start": {"tipo": "INSTANT", "@class": "java.time.Instant", "value": "2020-12-07T07:00:00Z"},
                             "type": "arrow-avg"
                         }
                     }],
@@ -181,10 +181,10 @@ Endpoint to be used to get a flowsheet datasource.
                     "minValue": 29,
                     "timelineItems": [{
                         "0":  {
-                            "data": {element: "Point3"},
+                            "data": {"element": "Point3"},
                             "extendable": true,
                             "id": "37120687432053845",
-                            "start": {tipo: "INSTANT", @class: "java.time.Instant", value: "2020-12-07T07:00:00Z"},
+                            "start": {"tipo": "INSTANT", "@class": "java.time.Instant", "value": "2020-12-07T07:00:00Z"},
                             "status": "APPLIED",
                             "type": "point",
                         }
