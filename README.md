@@ -9,7 +9,7 @@ The framework is responsible for the automatic execution of the methods, but the
 - [Save](#Save)
 - [Submit](#Submit)
 - [getMetadata](#getMetadata)
-- [getDatasource(#getDatasource)
+- [getDatasource](#getDatasource)
 - [getFormMetadata](#getFormMetadata)
 - [getSectionMetadata](#getSectionMetadata)
 - [getSectionDatasource](#getSectionDatasource)
