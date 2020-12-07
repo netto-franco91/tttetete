@@ -27,6 +27,20 @@ Endpoint to be used in order to save linkedData values.
 _(object)_ - true if saved performed sucessfully, false otherwise. <br />
 :warning: _(throws)_ - Exception - If some error occurs during save action. <br />
 
+#### :pencil2: Example
+**Request Payload:**
+```json
+[
+  {
+    "@class":"br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO"
+    "actionName": tectesf1FlowsheetAction,
+    "dtoCode": "1157339",
+    "parameters": {
+        encounter: 25246
+    }
+  }
+]
+```
 
 ### Submit
 ----
@@ -39,6 +53,21 @@ Endpoint to be used in order to release linkedData values.
 #### :leftwards_arrow_with_hook: Return
 _(object)_ - true if saved performed sucessfully, false otherwise. <br />
 :warning: _(throws)_ - Exception - If some error occurs during save action. <br />
+
+#### :pencil2: Example
+**Request Payload:**
+```json
+[
+  {
+    "@class":"br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO"
+    "actionName": tectesf1FlowsheetAction,
+    "dtoCode": "1157339",
+    "parameters": {
+        encounter: 25246
+    }
+  }
+]
+```
 
 
 ### getMetadata
@@ -56,6 +85,47 @@ Endpoint to be used to get a flowsheet metadata.
 :warning: _(throws)_ - Exception - If some error occurs during fetching its metadata. <br />
 
 #### :pencil2: Example
+**Request Payload:**
+```json
+[
+  {
+    "@class": "br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO",
+    "actionName": "tectesf1FlowsheetAction",
+    "dtoCode": "1157339"
+    "parameters": {
+        encounter: 25246
+    }
+  }
+]
+```
+**Response Payload:**
+```json
+{
+    "@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetMetadata"
+    "sections": [
+        0: {
+            "linkedDataId": 178,
+            "title": "Vital signs",
+            "rowValues": [{
+                0: {
+                    "description": "Abdominal,
+                    "id": "2196981,
+                    "timelineTableItems: [{@class: "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineTableItem",…},…],
+                    "listValueCustomColumn: [{@class: "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineCustomColumn",…},…],
+                    "timelineTableRow: {metaAtribute: {@class: "br.com.wheb.vo.componentes.metaData.MetaAtributo", componente: "TEXTBOX",…}}
+                }
+            }]
+        }
+    ],
+    "timelineProperties": {
+        ""@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetTimelineProperties",
+        "groupId": "ID",
+        "timelineGap": 2,
+        "timelineLength": 24,
+        "timelineOffset": -20
+    }
+}
+```
 
 ### getDatasource
 ----
@@ -70,6 +140,62 @@ Endpoint to be used to get a flowsheet datasource.
   - **sections** _(List<FlowsheetSectionDatasource>)_ - List of values ​​to be loaded from the flowsheet. <br />
 :warning: _(throws)_ - Exception - If some error occurs during fetching its datasource. <br />
 
+#### :pencil2: Example
+**Request Payload:**
+```json
+[
+  {
+    "@class": "br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO",
+    "actionName": "tectesf1FlowsheetAction",
+    "dtoCode": "1157339"
+    "parameters": {
+        encounter: 25246
+    }
+  }
+]
+```
+**Response Payload:**
+```json
+{
+    "@class": "br.com.wheb.vo.componentes.flowsheet.datasource.FlowsheetDatasource"
+    "sections": [
+        0: {
+            "linkedDataId": 178,
+            "rowValues": [{
+                0: {
+                    "avgValue": 50.75,
+                    "chartItems": [{
+                        0: {
+                            "color": "#3262DB",
+                            "data": {element: "ArrowAverage1", info: ["Nurse - Flávia Miranda", "<div>Heart Rate: 78bpm</div>"]},
+                            "id": "37120687432105502",
+                            "maxValue": 83,
+                            "minValue": 36,
+                            "start": {tipo: "INSTANT", @class: "java.time.Instant", value: "2020-12-07T07:00:00Z"},
+                            "type": "arrow-avg"
+                        }
+                    }],
+                    "id": "7904724",
+                    "maxValue": 85,
+                    "metadataRowId": "2196983",
+                    "minValue": 29,
+                    "timelineItems": [{
+                        0:  {
+                            "data": {element: "Point3"},
+                            "extendable": true,
+                            "id": "37120687432053845",
+                            "start": {tipo: "INSTANT", @class: "java.time.Instant", value: "2020-12-07T07:00:00Z"},
+                            "status": "APPLIED",
+                            "type": "point",
+                        }
+                    }],
+                    "value": "174",
+                }
+            }]
+        }
+    ],
+}
+```
 
 ### getFormMetadata
 ----
