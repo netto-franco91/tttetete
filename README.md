@@ -32,11 +32,11 @@ _(object)_ - true if saved performed sucessfully, false otherwise. <br />
 ```json
 [
   {
-    "@class":"br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO"
-    "actionName": tectesf1FlowsheetAction,
+    "@class":"br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO",
+    "actionName": "tectesf1FlowsheetAction",
     "dtoCode": "1157339",
     "parameters": {
-        encounter: 25246
+        "encounter": 25246
     }
   }
 ]
@@ -59,11 +59,11 @@ _(object)_ - true if saved performed sucessfully, false otherwise. <br />
 ```json
 [
   {
-    "@class":"br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO"
-    "actionName": tectesf1FlowsheetAction,
+    "@class":"br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO",
+    "actionName": "tectesf1FlowsheetAction",
     "dtoCode": "1157339",
     "parameters": {
-        encounter: 25246
+        "encounter": 25246
     }
   }
 ]
@@ -91,9 +91,9 @@ Endpoint to be used to get a flowsheet metadata.
   {
     "@class": "br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO",
     "actionName": "tectesf1FlowsheetAction",
-    "dtoCode": "1157339"
+    "dtoCode": "1157339",
     "parameters": {
-        encounter: 25246
+        "encounter": 25246
     }
   }
 ]
@@ -103,11 +103,11 @@ Endpoint to be used to get a flowsheet metadata.
 {
     "@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetMetadata"
     "sections": [
-        0: {
+        "0": {
             "linkedDataId": 178,
             "title": "Vital signs",
             "rowValues": [{
-                0: {
+                "0": {
                     "description": "Abdominal,
                     "id": "2196981,
                     "timelineTableItems: [{@class: "br.com.wheb.vo.componentes.flowsheet.metadata.TimelineTableItem",…},…],
@@ -147,9 +147,9 @@ Endpoint to be used to get a flowsheet datasource.
   {
     "@class": "br.com.wheb.vo.componentes.flowsheet.FlowsheetRequestVO",
     "actionName": "tectesf1FlowsheetAction",
-    "dtoCode": "1157339"
+    "dtoCode": "1157339",
     "parameters": {
-        encounter: 25246
+        "encounter": 25246
     }
   }
 ]
@@ -157,15 +157,15 @@ Endpoint to be used to get a flowsheet datasource.
 **Response Payload:**
 ```json
 {
-    "@class": "br.com.wheb.vo.componentes.flowsheet.datasource.FlowsheetDatasource"
+    "@class": "br.com.wheb.vo.componentes.flowsheet.datasource.FlowsheetDatasource",
     "sections": [
-        0: {
+        "0": {
             "linkedDataId": 178,
             "rowValues": [{
-                0: {
+                "0": {
                     "avgValue": 50.75,
                     "chartItems": [{
-                        0: {
+                        0": {
                             "color": "#3262DB",
                             "data": {element: "ArrowAverage1", info: ["Nurse - Flávia Miranda", "<div>Heart Rate: 78bpm</div>"]},
                             "id": "37120687432105502",
@@ -180,7 +180,7 @@ Endpoint to be used to get a flowsheet datasource.
                     "metadataRowId": "2196983",
                     "minValue": 29,
                     "timelineItems": [{
-                        0:  {
+                        "0":  {
                             "data": {element: "Point3"},
                             "extendable": true,
                             "id": "37120687432053845",
