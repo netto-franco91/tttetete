@@ -102,7 +102,7 @@ Endpoint to be used to get a flowsheet metadata.
 ```json
 {
     "@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetMetadata",
-    "sections": [
+    "sections": [{
         "0": {
             "linkedDataId": 178,
             "title": "Vital signs",
@@ -116,7 +116,7 @@ Endpoint to be used to get a flowsheet metadata.
                 }
             }]
         }
-    ],
+    }],
     "timelineProperties": {
         ""@class": "br.com.wheb.vo.componentes.flowsheet.metadata.FlowsheetTimelineProperties",
         "groupId": "ID",
@@ -158,7 +158,7 @@ Endpoint to be used to get a flowsheet datasource.
 ```json
 {
     "@class": "br.com.wheb.vo.componentes.flowsheet.datasource.FlowsheetDatasource",
-    "sections": [
+    "sections": [{
         "0": {
             "linkedDataId": 178,
             "rowValues": [{
@@ -193,7 +193,7 @@ Endpoint to be used to get a flowsheet datasource.
                 }
             }]
         }
-    ],
+    }],
 }
 ```
 
