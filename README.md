@@ -267,10 +267,10 @@ Endpoint to be used in order to return a specific section datasource.
 
 
 ## iconsTimeline
-Example of how to use the icons on the timeline and all types available.< br />
+Example of how to use the icons on the timeline and all types available.<br />
 
 #### :pencil2: Example
-Backend implementation example. <br />
+[Backend](https://github.com/philips-emr/tasy-framework-backend/blob/dev/tasy-legacy-samples/src/main/java/com/philips/tasy/app/tectes/tectesf1/TecTesF1TimelineData.java#L90) implementation example. <br />
 For most types, except for: point, range and background.<br />
 
 ```java
