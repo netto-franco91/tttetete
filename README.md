@@ -267,4 +267,63 @@ Endpoint to be used in order to return a specific section datasource.
 
 
 ## iconsTimeline
-Example of how to use the icons on the timeline and all types available.
+Example of how to use the icons on the timeline and all types available.< br />
+
+#### :pencil2: Example
+Backend implementation example. <br />
+For most types, except for: point, range and background.<br />
+
+´´´java
+private void itemTimeline(WTimeline item) {
+    String element = "element";
+    LocalDateTime datePoint3 = date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 6, 00);
+    HashMap<String, Object> data3 = new HashMap<>();
+    data3.put(element, "Test item");
+    WTimelineItem point3 = new WTimelineItem(Long.toString(System.nanoTime()), WTimelineType.notRecord);
+    point3.setStart(datePoint3);
+    point3.setData(data3);
+    item.getItems().add(point3);
+}
+´´´
+
+For types: point, range and background, use.<br />
+
+´´´java
+private void dataPoint(WTimeline item) {
+    String element = "element";
+    LocalDateTime datePoint3 = date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 4, 00);
+    HashMap<String, Object> data3 = new HashMap<>();
+    data3.put(element, "Point3");
+    Point point3 = new Point(Long.toString(System.nanoTime()));
+    point3.setStart(datePoint3);
+    point3.setStatus(DefaultStatus.APPLIED.toString());
+    point3.setData(data3);
+    item.getItems().add(point3);
+}
+´´´
+
+´´´java
+private void dataRange(WTimeline item) {
+    Range rangeWithInterval = new Range(Long.toString(System.nanoTime()));
+    rangeWithInterval.setContent("Personalite");
+    rangeWithInterval.setStart(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 8, 00));
+    rangeWithInterval.setEnd(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 18, 00));
+    rangeWithInterval.setData(null);
+
+    RangeInterval interval = new RangeInterval(Long.toString(System.nanoTime()));
+    interval.setStart(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 10, 00));
+    interval.setEnd(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 12, 00));
+    interval.setStatus(DefaultStatus.PAUSED.toString());
+
+    rangeWithInterval.addInterval(interval);
+}
+´´´
+
+´´´java
+private void dataBackground(WTimeline item) {
+    Background background = new Background("firstBackground");
+    background.setStart(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 2, 00));
+    background.setEnd(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 4, 00));
+    item.getItems().add(background);
+}
+´´´
