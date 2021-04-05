@@ -329,7 +329,6 @@ private void dataBackground(WTimeline item) {
 ```
 
 #### :bookmark_tabs: Icons type
-#### :bookmark_tabs: Icons type
 
 | Icon              |  Icon  Type |
 | ----------------- | ----------- |
