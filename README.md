@@ -274,6 +274,7 @@ Backend implementation example. <br />
 For most types, except for: point, range and background.<br />
 
 ´´´java
+
 private void itemTimeline(WTimeline item) {
     String element = "element";
     LocalDateTime datePoint3 = date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 6, 00);
@@ -284,11 +285,13 @@ private void itemTimeline(WTimeline item) {
     point3.setData(data3);
     item.getItems().add(point3);
 }
+
 ´´´
 
 For types: point, range and background, use.<br />
 
 ´´´java
+
 private void dataPoint(WTimeline item) {
     String element = "element";
     LocalDateTime datePoint3 = date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 4, 00);
@@ -300,9 +303,11 @@ private void dataPoint(WTimeline item) {
     point3.setData(data3);
     item.getItems().add(point3);
 }
+
 ´´´
 
 ´´´java
+
 private void dataRange(WTimeline item) {
     Range rangeWithInterval = new Range(Long.toString(System.nanoTime()));
     rangeWithInterval.setContent("Personalite");
@@ -317,13 +322,16 @@ private void dataRange(WTimeline item) {
 
     rangeWithInterval.addInterval(interval);
 }
+
 ´´´
 
 ´´´java
+
 private void dataBackground(WTimeline item) {
     Background background = new Background("firstBackground");
     background.setStart(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 2, 00));
     background.setEnd(date(startDate.getYear(), startDate.getMonthValue(), startDate.getDayOfMonth(), 4, 00));
     item.getItems().add(background);
 }
+
 ´´´
