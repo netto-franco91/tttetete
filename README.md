@@ -258,6 +258,7 @@ Endpoint to be used in order to return a specific section datasource.
     - **value** _(String)_ - Row value. <br />
     - **id** _(String)_ - Identification id. <br />
   - **linkedDataId** _(Integer)_ - Id Linked Data. <br />
+  - **summaryVisionChart** _(Boolean)_ - true to activate the summary vision chart. <br />
 :warning: _(throws)_ - Exception - If some error occurs during fetching its form metadata. <br />
 
 #### :pencil2: Example
