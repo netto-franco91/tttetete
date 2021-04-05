@@ -4,6 +4,7 @@ Class with the implementations of the methods used by the Flowsheet component. <
 The framework is responsible for the automatic execution of the methods, but they should be created and customized by DEV. <br />
 
 - [Methods](#Methods)
+- [Icons Timeline](#iconsTimeline)
 
 ## Methods
 - [Save](#Save)
@@ -263,3 +264,7 @@ Endpoint to be used in order to return a specific section datasource.
 
 #### :pencil2: Example
 [Example](https://github.com/philips-emr/tasy-framework-backend/blob/dev/tasy-legacy-samples/src/main/java/com/philips/tasy/app/tectes/tectesf1/flowsheet/TecTesF1FlowsheetAction.java#L77)<br />
+
+
+## iconsTimeline
+Example of how to use the icons on the timeline and all types available.
