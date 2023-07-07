@@ -19,7 +19,7 @@ wChartSeriesListDTO.getChartProperties().setType(SerieType.LINE_CHART_JS);
 ```
 
 _Configuration to change point style, we have these options: 'CIRCLE', 'CROSS', 'CROSS_ROT', 'DASH', 'LINE', 'RECT', 'RECT_ROUNDED', 'RECT_ROT', 'STAR', 'TRIANGLE'_<br>
-
+###:warning: Attention. For each 'series' (line) of the graph we will have to add a 'point style' with the 'addPointsStyles' method.<br>###
 ```java
 wChartSeriesListDTO.getChartProperties().addPointsStyles(PointStyleEnum.CIRCLE);
 ```
