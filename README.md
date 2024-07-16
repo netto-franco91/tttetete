@@ -111,3 +111,55 @@ public class TecTesF1WChartPostProcessingAction extends AbstractWChartPostProces
     }
 }
 ```
+
+
+
+# Region DragDrop Resizer
+
+This component was created with the aim of enabling the 'resizer' of panels and regions of the Tasy system.
+With this we can resize each screen, allowing the user to organize the system screens as he wishes.
+
+> :warning: _To activate this configuration, it will be necessary **to migrate the function to use DX schematics** and **configure in Regions what type of 'resizer'** you would like to create for the panel._
+
+To activate resizing it will be necessary to change the Region's 'Layout Resize' field.
+
+The options for the Layout Resize field are: **Horizontal, Vertical and Both.**
+
+**_Example_**: to activate the resizer in a template that has two horizontal areas. 
+You must go to the first area and change the 'Layout Resizer' field to the horizontal value and so on.
+
+Exemples:
+
+- Only Region 0 and 1 Vertical
+![image](https://github.com/user-attachments/assets/f09da16c-686d-4ce0-bfe7-b52d851a238b)
+
+config:
+![image](https://github.com/user-attachments/assets/2296c8c0-ebf8-4063-9668-b2ddc899bd4e)
+
+![image](https://github.com/user-attachments/assets/92a4a60b-f1a1-409c-b3b2-d03b615e8fda)
+
+![image](https://github.com/user-attachments/assets/3360e305-a5e8-4119-9874-e1ecf5402138)
+
+- Region 0 and 1 Vertical with region 2 horizontal
+![image](https://github.com/user-attachments/assets/db3bf3d8-71f0-4fb5-81a5-d15e8990889d)
+
+config:
+
+![image](https://github.com/user-attachments/assets/2296c8c0-ebf8-4063-9668-b2ddc899bd4e)
+
+![image](https://github.com/user-attachments/assets/2592353c-6b00-4c96-b9bb-5662770cc292)
+
+![image](https://github.com/user-attachments/assets/3360e305-a5e8-4119-9874-e1ecf5402138)
+
+- Horizontal and Vertical in the 4 regions
+![image](https://github.com/user-attachments/assets/c8d562b8-84b5-4926-a08f-21db12c76b94)
+
+config:
+![image](https://github.com/user-attachments/assets/f0c5515b-601c-4279-abd1-ed76ee6e26f6)
+
+![image](https://github.com/user-attachments/assets/8d5a0806-f3b1-4c4e-adbb-33ee1ec4aee3)
+
+![image](https://github.com/user-attachments/assets/37efb095-729b-4498-814b-7447a92db3b4)
+
+![image](https://github.com/user-attachments/assets/943a980e-41bd-4438-9df3-798f902938d5)
+
