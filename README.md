@@ -17,6 +17,58 @@ const variable = `Minhas primeira string ${secondString}`;
 ```
 <br><br>
 
+## Usar Constantes
+#### :pencil2: Examples: <br>
+
+_NÃO USAR_<br>
+```java
+ajustLastPosition = (element) => {
+  const code = this.getCodeElement(element);
+  const codeFeature = this.getCodeFeature(this.scope);
+  const dadosPostion = this.getDataResizer(codeFeature, code);
+  if (dadosPostion) {
+    const elementParent = element.parentElement;
+    if (dadosPostion.width && !elementParent.classList.contains('region-cont-column')) {
+      element.style.width = dadosPostion.width;
+      element.style.flex = 'none';
+    } else if (dadosPostion.width && elementParent.classList.contains('region-cont-column')) {
+      elementParent.style.width = dadosPostion.width;
+      elementParent.style.flex = 'none';
+    }
+    if (dadosPostion.height) {
+      element.style.height = dadosPostion.height;
+      element.style.flex = 'none';
+    }
+  }
+}
+```
+
+_USAR_<br>
+```java
+import { wRegionConstant } from './w-region-drag-drop-resize-areas.constant';
+
+ajustLastPosition = (element) => {
+  const code = this.getCodeElement(element);
+  const codeFeature = this.getCodeFeature(this.scope);
+  const dadosPostion = this.getDataResizer(codeFeature, code);
+  if (dadosPostion) {
+    const elementParent = element.parentElement;
+    if (dadosPostion.width && !elementParent.classList.contains(wRegionConstant.CLASS_CONT_COLUMN)) {
+      element.style.width = dadosPostion.width;
+      element.style.flex = wRegionConstant.NONE;
+    } else if (dadosPostion.width && elementParent.classList.contains(wRegionConstant.CLASS_CONT_COLUMN)) {
+      elementParent.style.width = dadosPostion.width;
+      elementParent.style.flex = wRegionConstant.NONE;
+    }
+    if (dadosPostion.height) {
+      element.style.height = dadosPostion.height;
+      element.style.flex = wRegionConstant.NONE;
+    }
+  }
+}
+```
+<br><br>
+
 ## Separar condicionais de filtros 
 #### :pencil2: Examples: <br>
 
