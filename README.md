@@ -1,7 +1,20 @@
 # Dicas para um padrão de código <br>
 Fazer um padrão em determinadas coisas.</br>
 
+## Interpolação
+#### :pencil2: Examples: <br>
 
+_NÃO USAR_<br>
+```java
+const secondString = 'Minha segunda string';
+const variable = 'Minhas primeira string ' + secondString;
+```
+
+_USAR_<br>
+```java
+const secondString = 'Minha segunda string';
+const variable = `Minhas primeira string ${secondString}`;
+```
 
 
 
