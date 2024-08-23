@@ -22,8 +22,9 @@ const variable = `Minhas primeira string ${secondString}`;
 
 _NÃO USAR_<br>
 ```java
-const itensSibling = Array.from(this.elementResizer.parentElement.children).filter(x => !x.classList.contains(wRegionConstant.CLASS_RESIZER) 
-                                                                                     && !x.classList.contains(wRegionConstant.CLASS_RESIZER_PANEL) && x.style.display != wRegionConstant.NONE);
+const itensSibling = Array.from(this.elementResizer.parentElement.children)
+                          .filter(x => !x.classList.contains(wRegionConstant.CLASS_RESIZER) 
+                                    && !x.classList.contains(wRegionConstant.CLASS_RESIZER_PANEL) && x.style.display != wRegionConstant.NONE);
 ```
 
 _USAR_<br>
