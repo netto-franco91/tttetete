@@ -1,5 +1,10 @@
-# Line Chart JS - (Vital signs) <br>
-The "LINE_CHART_JS" type chart basically has the same structure as the "LINE" type, but it was created so that we can customize the 'point styles'.</br>
+# Dicas para um padrão de código <br>
+Fazer um padrão em determinadas coisas.</br>
+
+
+
+
+
 
 To use the 'LINE_CHART_JS' type chart, we need to make the change via 'BACKEND', as this type of chart is a motivation of the 'LINE' type, so to use it we have to make some configurations and change the default 'Line' type.</br>
 
